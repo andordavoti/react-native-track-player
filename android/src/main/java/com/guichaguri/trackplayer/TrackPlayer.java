@@ -10,7 +10,7 @@ import java.util.List;
 
 /**
  * TrackPlayer
- * https://github.com/react-native-kit/react-native-track-player
+ * https://github.com/react-native-kit/@andordavoti/react-native-track-player
  * @author Guichaguri
  */
 public class TrackPlayer implements ReactPackage {

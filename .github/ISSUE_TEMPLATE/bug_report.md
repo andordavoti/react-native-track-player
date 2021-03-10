@@ -1,10 +1,9 @@
 ---
 name: Bug report
 about: Report a bug or crash
-title: ''
+title: ""
 labels: Bug, Needs Confirmation
-assignees: ''
-
+assignees: ""
 ---
 
 **Describe the bug**
@@ -15,7 +14,7 @@ Steps to reproduce the behavior:
 
 **Environment (please complete the following information):**
 Run `react-native info` in your project and share the content.
-What `react-native-track-player` version are you using?
+What `@andordavoti/react-native-track-player` version are you using?
 Are you testing on a real device or in the simulator? Which OS version are you running?
 
 **Code**
