@@ -3,15 +3,15 @@ import PropTypes from "prop-types";
 import TrackPlayer, {
   useTrackPlayerProgress,
   usePlaybackState,
-  useTrackPlayerEvents,
-} from "@andordavoti/react-native-track-player";
+  useTrackPlayerEvents
+} from "react-native-track-player";
 import {
   Image,
   StyleSheet,
   Text,
   TouchableOpacity,
   View,
-  ViewPropTypes,
+  ViewPropTypes
 } from "react-native";
 
 function ProgressBar() {
@@ -23,7 +23,7 @@ function ProgressBar() {
       <View
         style={{
           flex: progress.duration - progress.position,
-          backgroundColor: "grey",
+          backgroundColor: "grey"
         }}
       />
     </View>
@@ -40,7 +40,7 @@ function ControlButton({ title, onPress }) {
 
 ControlButton.propTypes = {
   title: PropTypes.string.isRequired,
-  onPress: PropTypes.func.isRequired,
+  onPress: PropTypes.func.isRequired
 };
 
 export default function Player(props) {
@@ -48,7 +48,7 @@ export default function Player(props) {
   const [trackTitle, setTrackTitle] = useState("");
   const [trackArtwork, setTrackArtwork] = useState();
   const [trackArtist, setTrackArtist] = useState("");
-  useTrackPlayerEvents(["playback-track-changed"], async (event) => {
+  useTrackPlayerEvents(["playback-track-changed"], async event => {
     if (event.type === TrackPlayer.TrackPlayerEvents.PLAYBACK_TRACK_CHANGED) {
       const track = await TrackPlayer.getTrack(event.nextTrack);
       const { title, artist, artwork } = track || {};
@@ -88,11 +88,11 @@ Player.propTypes = {
   style: ViewPropTypes.style,
   onNext: PropTypes.func.isRequired,
   onPrevious: PropTypes.func.isRequired,
-  onTogglePlayback: PropTypes.func.isRequired,
+  onTogglePlayback: PropTypes.func.isRequired
 };
 
 Player.defaultProps = {
-  style: {},
+  style: {}
 };
 
 const styles = StyleSheet.create({
@@ -105,35 +105,35 @@ const styles = StyleSheet.create({
     alignItems: "center",
     shadowColor: "black",
     backgroundColor: "white",
-    shadowOffset: { width: 0, height: 1 },
+    shadowOffset: { width: 0, height: 1 }
   },
   cover: {
     width: 140,
     height: 140,
     marginTop: 20,
-    backgroundColor: "grey",
+    backgroundColor: "grey"
   },
   progress: {
     height: 1,
     width: "90%",
     marginTop: 10,
-    flexDirection: "row",
+    flexDirection: "row"
   },
   title: {
-    marginTop: 10,
+    marginTop: 10
   },
   artist: {
-    fontWeight: "bold",
+    fontWeight: "bold"
   },
   controls: {
     marginVertical: 20,
-    flexDirection: "row",
+    flexDirection: "row"
   },
   controlButtonContainer: {
-    flex: 1,
+    flex: 1
   },
   controlButtonText: {
     fontSize: 18,
-    textAlign: "center",
-  },
+    textAlign: "center"
+  }
 });

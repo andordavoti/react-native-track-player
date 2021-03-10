@@ -1,8 +1,6 @@
 import React, { useEffect } from "react";
 import { StyleSheet, Text, View } from "react-native";
-import TrackPlayer, {
-  usePlaybackState,
-} from "@andordavoti/react-native-track-player";
+import TrackPlayer, { usePlaybackState } from "react-native-track-player";
 
 import Player from "../components/Player";
 import playlistData from "../data/playlist.json";
@@ -24,12 +22,12 @@ export default function PlaylistScreen() {
         TrackPlayer.CAPABILITY_PAUSE,
         TrackPlayer.CAPABILITY_SKIP_TO_NEXT,
         TrackPlayer.CAPABILITY_SKIP_TO_PREVIOUS,
-        TrackPlayer.CAPABILITY_STOP,
+        TrackPlayer.CAPABILITY_STOP
       ],
       compactCapabilities: [
         TrackPlayer.CAPABILITY_PLAY,
-        TrackPlayer.CAPABILITY_PAUSE,
-      ],
+        TrackPlayer.CAPABILITY_PAUSE
+      ]
     });
   }
 
@@ -44,7 +42,7 @@ export default function PlaylistScreen() {
         title: "Pure (Demo)",
         artist: "David Chavez",
         artwork: "https://i.picsum.photos/id/500/200/200.jpg",
-        duration: 28,
+        duration: 28
       });
       await TrackPlayer.play();
     } else {
@@ -75,7 +73,7 @@ export default function PlaylistScreen() {
 }
 
 PlaylistScreen.navigationOptions = {
-  title: "Playlist Example",
+  title: "Playlist Example"
 };
 
 function getStateName(state) {
@@ -109,17 +107,17 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     alignItems: "center",
-    backgroundColor: "#F5FCFF",
+    backgroundColor: "#F5FCFF"
   },
   description: {
     width: "80%",
     marginTop: 20,
-    textAlign: "center",
+    textAlign: "center"
   },
   player: {
-    marginTop: 40,
+    marginTop: 40
   },
   state: {
-    marginTop: 20,
-  },
+    marginTop: 20
+  }
 });
