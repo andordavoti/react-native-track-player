@@ -1,6 +1,6 @@
 {
   "name": "@andordavoti/react-native-track-player",
-  "version": "1.2.4",
+  "version": "1.2.8",
   "description": "A fully fledged audio module created for music apps",
   "contributors": [
     "David Chavez <david@dcvz.io> (http://dcvz.io)",
@@ -25,10 +25,10 @@
   "license": "Apache-2.0",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/m-inan/react-native-track-player.git"
+    "url": "https://github.com/andordavoti/react-native-track-player.git"
   },
   "bugs": {
-    "url": "https://github.com/m-inan/react-native-track-player/issues"
+    "url": "https://github.com/andordavoti/react-native-track-player/issues"
   },
   "scripts": {
     "deploy": "npm publish --access public"
@@ -37,7 +37,7 @@
     "react": ">=16.8.6",
     "react-native": ">=0.60.0-rc.2"
   },
-  "homepage": "https://github.com/m-inan/react-native-track-player#readme",
+  "homepage": "https://github.com/andordavoti/react-native-track-player#readme",
   "main": "index.js",
   "directories": {
     "doc": "docs",
