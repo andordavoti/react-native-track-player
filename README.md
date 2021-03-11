@@ -6,6 +6,14 @@
 
 A fork of [original repo](https://github.com/react-native-kit/react-native-track-player), with shuffle and repeat added.
 
+# Publishing
+
+npm run deploy (deploys to npm)
+
+git tag v1.2.12 (change to latest version number)
+
+git push —tags (pushes packages to gihub for iOS pods)
+
 A fully fledged audio module created for music apps. Provides audio playback, external media controls, background mode and more!
 
 ---
